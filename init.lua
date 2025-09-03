@@ -150,9 +150,9 @@ vim.o.splitbelow = true
 --  It is very similar to `vim.o` but offers an interface for conveniently interacting with tables.
 --   See `:help lua-options`
 --   and `:help lua-options-guide`
-vim.o.list = true
+vim.o.list = false
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-vim.o.tabstop = 8 -- A TAB character looks like 4 spaces
+vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
 --vim.o.expandtab = true -- Pressing the TAB key will insert spaces
 vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
 vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
