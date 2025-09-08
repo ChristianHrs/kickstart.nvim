@@ -156,6 +156,15 @@ vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
 --vim.o.expandtab = true -- Pressing the TAB key will insert spaces
 vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
 vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'typescript', 'typescriptreact', 'typescript.tsx' },
+  callback = function()
+    vim.bo.tabstop = 2
+    vim.bo.shiftwidth = 2
+    vim.bo.softtabstop = 2
+    vim.bo.expandtab = true
+  end,
+})
 
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
